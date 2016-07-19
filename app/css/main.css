@@ -1,0 +1,62 @@
+body {
+	background-color: #fff;
+}
+
+a {
+	text-decoration:none;
+	color: #fff;
+}
+
+.button {
+	margin: 100px auto;
+	width: 250px;
+	height: 60px;
+	position: relative;
+}
+
+.demo {
+	background-color: #af0000;
+	width: 200px;			/*Ставим ширину 200, потому что у нас паддинг
+							будет 50 пикселей для иконки шестиренки*/
+	height: 60px;
+	padding: 0 0 0 50px;
+	text-align: center;
+	position: absolute;
+	line-height: 60px;
+	font-size: 2em;
+	top:0;				/*Этот блок прикрепляем слева*/
+	left:0;
+	z-index: 2;
+	transition: 1s;
+}
+
+.disc {
+	background-color: #830000;
+	position: absolute;
+	width: 100px;
+	height: 40px;			/*Задаем высоту 40*/
+	padding: 10px 0;		/*И компенсируем её через паддинг*/
+	text-align: center;
+	line-height: 20px;		/*Т.к. у нас две строки - делим 40 на 2*/
+	top:0;					/*Этот блок прикрепляем справа*/
+	right:0;
+	z-index: 1;
+}
+
+img {
+	position: absolute;
+	z-index: 3;
+	left:14px;				/*Выравниваем шестиренку*/
+	top:14px;
+	transition: 1.5s;
+}
+
+.button:hover  .demo {
+	width:100px;			/*При наведении уменьшаем ширину 
+							и размер шрифта*/
+	font-size: 1.4em;
+}
+
+.button:hover img {
+	transform: rotate(360deg);
+}
